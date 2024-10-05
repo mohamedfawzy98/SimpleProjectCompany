@@ -1,0 +1,16 @@
+﻿@model DepartmentViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create Department</h1>
+
+<form asp-action="Create">
+    
+    <partial name="PartialViewDepartment/PartialCreateEdit" model="Model" />
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+    <a class="btn btn-light" asp-action="Index"> Back To List </a>
+</form>
+

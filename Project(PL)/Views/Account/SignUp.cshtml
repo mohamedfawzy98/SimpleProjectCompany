@@ -1,0 +1,28 @@
+﻿@model SignUpViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_AuthLayout1.cshtml";
+}
+
+<div class="main-agileinfo">
+	<div class="agileits-top">
+		<form asp-action="SignUp">
+			<input asp-for="UserName" type="text" placeholder="Username">
+			<input asp-for="FName" type="text" placeholder="FName">
+			<input asp-for="LName" type="text" placeholder="LName">
+			<input email" type="email" asp-for="Email" placeholder="Email">
+			<input type="password" asp-for="Password" placeholder="Password">
+			<input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password">
+			<div class="wthree-text">
+				@* <label class="anim">
+				<input type="checkbox" asp-for="IsActive" class="checkbox" required="">
+				<span>I Agree To The Terms & Conditions</span>
+				</label> *@
+				<div class="clear"> </div>
+			</div>
+			<input type="submit" value="SIGNUP">
+		</form>
+		<p>Don't have an Account? <a href="SignIn"> Login Now!</a></p>
+	</div>
+</div>
+

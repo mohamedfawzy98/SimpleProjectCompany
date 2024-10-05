@@ -1,0 +1,66 @@
+﻿@model EmployeeViewModel
+
+@{
+    var Departments = new SelectList(ViewData["department"] as IEnumerable<Department> ,"Id","Name");
+
+}
+<div asp-validation-summary="All">
+
+</div>
+<div class="form-group">
+    <label asp-for="Name" class="col-form-lable"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<br />
+<div class="form-group">
+    <label asp-for="Age" class="col-form-lable"></label>
+    <input asp-for="Age" class="form-control" />
+    <span asp-validation-for="Age" class="text-danger"></span>
+
+</div>
+<br />
+<div class="form-group">
+    <label asp-for="Address" class="col-form-lable"></label>
+    <input asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+
+</div>
+<div class="form-group">
+    <label asp-for="Email" class="col-form-lable"></label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+</div>
+<div class="form-group">
+    <label asp-for="Salary" class="col-form-lable"></label>
+    <input asp-for="Salary" class="form-control" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+
+</div>
+<div class="form-group">
+    <label asp-for="Image" class="col-form-lable"></label>
+    <input type="file" asp-for="Image" class="form-control" />
+
+</div>
+<div class="form-group">
+    <label asp-for="IsActive" class="form-check"></label>
+    <input asp-for="IsActive" class="form-check" />
+
+</div>
+<div class="form-group">
+    <label asp-for="WorkFor" class="form-check"></label>
+    <select asp-for="WorkForId" asp-items="Departments" class="form-control">
+        <option value="@null">-- Select Department --</option>
+    </select>
+
+</div>
+<div class="form-group">
+    <label asp-for="phone" class="col-form-lable"></label>
+    <input asp-for="phone" class="form-control" />
+
+</div>
+@section Requset {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
